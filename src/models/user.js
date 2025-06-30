@@ -48,7 +48,7 @@ const userSchema=mongoose.Schema({
     photoUrl:{
         type:String,
         default:"https://geographyandyou.com/images/user-profile.png",
-        alidate(value){
+        validate(value){
             if(!validator.isURL(value)){
                 throw new Error("Invaild Photo URL  :"+value)
             }
